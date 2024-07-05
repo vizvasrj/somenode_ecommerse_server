@@ -53,4 +53,9 @@ router.use('/review', reviewRoutes);
 // Wishlist routes
 router.use('/wishlist', wishlistRoutes);
 
+// healthCheck
+router.get('/healthCheck', (req, res) => {
+    res.status(200).json({ message: 'API is working fine' });
+});
+
 module.exports = router;
